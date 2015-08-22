@@ -1,0 +1,27 @@
+{
+  "name": "c-workshop",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "./scripts/postinstall.sh",
+    "build": "npm run build:js",
+    "build:js": "bash ./scripts/buildjs.sh",
+    "prestart": "npm run build",
+    "start": "node --harmony ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "~1.12.4",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.12.4",
+    "express-layout": "^0.1.0",
+    "express-session": "^1.11.3",
+    "hbs": "~2.9.0",
+    "mongodb": "^2.0.35",
+    "morgan": "~1.5.3",
+    "serve-favicon": "~2.2.1",
+    "socket.io": "^1.3.6",
+    "winston": "^1.0.1"
+  }
+}

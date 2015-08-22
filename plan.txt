@@ -1,0 +1,127 @@
+C Workshop:
+============
+
+*******************************
+* Use the concepts from math. *
+*******************************
+
+------------------------------------------ DAY 1 -----------------------------------------------
+
+- Introduction (5 minutes max)
+	- What programming is used for
+
+- Basic structure of a program (15 minutes)
+	- Input
+	- Memory
+	- Instructions
+	- Output
+
+	- examples
+		- calculator
+		- video game
+		- microsoft's age predictor
+	
+	- What C is used for in programming
+
+- "To C or not to C - that is the question" (5 minutes)
+	- syntax
+
+- variables
+	- type
+	- naming rules
+	- declaration & definition
+
+- IO
+	- format specifiers
+	- escape sequences
+	- field width and precision (TO BE VISITED AT A LATER STAGE)
+
+	---- fraction adder ----
+
+- operators
+	- arithmetic
+		- modulo operator for negatives
+	- boolean
+		- short circuiting
+		- page 119
+	- binary
+
+- error messages
+	- line number
+	- "function not declared"						Missing header file?
+	- "Parse error, expecting ';' or SEP"			Missing semi colon at the end of the statement/forgot to close quotes
+	- "Parse error, expecting '}'"					Missing } 
+	- "Parse error, expecting ')'"					Missing )
+	- "variable X not found"						Undeclared variable/forgot to write quotes around a string
+	- linker error?
+
+- if, switch statements
+
+	-- UPC Code checker (page 81)
+	---- date validator ----
+
+- functions (intro)
+
+- math functions
+	- pow, sqrt, abs, fabs, sin, cos, tan, asin, acos, atan ...
+
+	---- complex number calculator ----
+
+- char
+	- isupper, islower, toupper, tolower, isdigit, isalpha, isalnum, ...
+	- ASCII
+
+- loops
+	- while
+		- infinite loops
+		-- table of square of numbers
+		-- reversing a number
+
+	- do while
+		-- calculating number of digits
+
+	- for
+		- idioms
+		- omitting expressions
+		-- table of squares again
+
+	- break, continue
+	-- prime checking --
+
+	- the NULL statement (??)
+
+- arrays
+	- subscripting
+		-- reversing a series of numbers
+
+	- initialisation (??)
+	-- checking number for repeated digits
+
+	- multidimensional arrays
+		??
+
+	---- magic square ----
+	---- polynomial integrator/differentiator ----
+	---- look & say sequence ----
+	---- minesweeper ----
+
+- strings
+	- are arrays of characters
+	- string literals
+	- str functions:
+		strlen, strcmp, strcmpi, strcpy
+	---- big integer ----
+
+------------------------------------------ DAY 2 -----------------------------------------------
+
+- typing revisited
+
+- functions
+
+- scoping
+
+- pointers
+
+- structures
+
+- preprocessor

@@ -1,0 +1,17 @@
+#sidebar {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+#main {
+	height: 100%;
+	width: 80%;
+	float: left;
+}
+
+body::after {
+	content: " ";
+	display: table;
+	clear: both;
+}

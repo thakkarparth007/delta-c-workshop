@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login :: Delta C Workshop</title>
+	<style type="text/css">
+	h1 {
+		text-align: center;
+		padding: 10px;
+		border-bottom: 2px solid #000;
+	}
+	#main {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	form {
+		display: table;
+		padding: 10px;
+		border: 1px solid;
+	}
+	form div {
+		display: table-row;
+	}
+	label {
+		display: table-cell;
+		padding: 0 10px;
+	}
+	form input {
+		display: table-cell;
+	}
+	#login_topbar {
+		text-align: center;
+		padding: 10px;
+		background: #444;
+		color: white;
+	}
+	.error {
+		color: red;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id="title">Delta C Workshop</h1>
+	</header>
+	<div id="main">
+		<div id="login_topbar">Login</div>
+		<form method="POST" action="./login">
+
+			<div>
+				<label for="name">Name</label>
+				<input name="name" id="name">
+			</div>
+
+			<div>
+				<label for="rollNumber">Roll Number</label>
+				<input name="rollNumber" id="rollNumber">
+			</div>
+
+			<div>
+				<label></label>
+				<input type="submit" value="Login" name="submit">
+			</div>
+			<div>
+				<label></label>
+				<span class="error">{{ error }}</span>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
