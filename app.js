@@ -35,11 +35,13 @@ app.set('view engine', 'hbs');
 
 app.use(logger(config.env));
 app.use(bodyParser.json());
-app.use(session({
+
+app.sessionMiddleware = session({
   secret: 'LOLCODEROXMENNYOYOBBZSINGHU!',
   resave: false,
   saveUninitialized: true
-}));
+});
+app.use(app.sessionMiddleware);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/lessons',express.static(path.join(__dirname, 'lessons')));

@@ -9,7 +9,11 @@ router.get('/', function(req, res, next) {
 			res.status(500).end();
 		}
 		else {
-			res.render('dashboard', { lessons: files.map(x => x.substr(0,x.length-5)).join(",") });
+			res.render('dashboard', { 
+				lessons: files.map(x => x.substr(0,x.length-5)).join(","),
+				currentLesson: files[0].substr(0, files[0].length-5),
+				isAdmin: req.session.isAdmin
+			});
 		}
 	});
 });

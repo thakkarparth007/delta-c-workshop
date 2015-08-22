@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('c-workshop:server');
 var http = require('http');
+var ioServer = require('./ioServer');
 
 /**
  * Get port from environment and store in Express.
@@ -26,6 +27,10 @@ var server = http.createServer(app);
  */
 
 var io = require('socket.io')(server);
+ioServer(io);
+io.use(function(socket, next) {
+  app.sessionMiddleware(socket.request, socket.request.res, next);
+});
 
 /**
  * Listen on provided port, on all network interfaces.

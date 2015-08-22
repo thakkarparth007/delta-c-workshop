@@ -13,8 +13,8 @@
 
 module.exports = function(req, user, cb) {
 	req.session.isloggedin = true;
-	req.session.username = user.username;
 	req.session.name = user.name;
-	req.session.score = user.score;
+	req.session.rollNumber = user.rollNumber;
+	req.session.isAdmin = user.isAdmin;
 	cb();
 };

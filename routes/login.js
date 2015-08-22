@@ -29,6 +29,7 @@ function validateLogin(name, rollNumber, cb) {
 			if(!user)
 				return cb(null, false);
 
+			user.isAdmin = user.name == "admin";
 			cb(null, user);
 		});
 	});

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login :: Delta C Workshop</title>
+	<title>Delta C Workshop</title>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/common.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/dashboard.css">
 </head>
@@ -13,34 +13,23 @@
 		
 	</div>
 	<div id="main">
-		
+		<div id="main-text"></div>
+		<pre id="main-code"></pre>
 	</div>
 
+	<script type="text/javascript">
+		window.lessons = "{{ lessons }}".split(",");
+		window.currentLesson = "{{ currentLesson }}";
+	</script>
 	<script type="text/javascript" src="/javascripts/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="/javascripts/underscore.js"></script>
 	<script type="text/javascript" src="/javascripts/handlebars-v3.0.3.js"></script>
 	<script type="text/javascript" src="/javascripts/backbone.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="/javascripts/main.js"></script>
-	<script type="text/javascript">
-		var lessons = "{{ lessons }}".split(",");
-		var $sidebar = $("#sidebar");
 
-		function prettifyLessonName(lesson) {
-			var num, name;
-			var match = lesson.match(/^([\d\.]+)(.+)$/);
-
-			num = match[1];
-			name = match[2].split("-").map(function(x) {
-				return x[0].toUpperCase() + x.substr(1);
-			}).join(" ");
-
-			return num + " " + name;
-		}
-
-		for(var i = 0; i < lessons.length; i++) {
-			$sidebar.append("<a id='" + lessons[i] + "'>" + prettifyLessonName(lessons[i]) + "</a>");
-		}
-		$sidebar.append("<a id='" + "yolo" + "'>" + prettifyLessonName("1.2.3.HOLA") + "</a>");
-	</script>
+	{{#if isAdmin}}
+		<script type="text/javascript" src="/javascripts/admin.js"></script>
+	{{/if}}
 </body>
 </html>
