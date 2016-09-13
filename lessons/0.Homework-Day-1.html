@@ -1,0 +1,78 @@
+<h1>Day 1 : Homework</h1>
+
+<div>
+	<pre>
+The following questions are based on what was already covered today:
+(The questions are in order of increasing difficulty.)
+
+	<hr>
+1. <b>Barcode verifier</b>
+	A barcode has 13 digits. The first twelve digits represent 
+	the actual information about the product, where as the last digit
+	acts as a check digit. (Barcodes are generally scanned by machines,
+	and there is a good chance that the scanning might not be accurate,
+	hence, the last digit is used as a checker.)
+
+	To check if the scanned barcode is correct, you do the following:
+
+	Add all the digits in the odd position (except the last digit). 
+	Multiply this sum by 3,	and to it, add the sum of all digits in the 
+	even position. Subtract one from this. Take modulo 10 of the remaining
+	value. Subtract the result from 9. The last digit must be equal to 
+	this.
+
+	Your task is - given a barcode (13 digits, space separated), 
+	output "VALID" if the barcode is valid. Output "INVALID" otherwise.
+
+	(Modulo means remainder. "Take modulo 10 of x" means, find the remainder
+	that x would leave when divided by 10. You use the <b>%</b> operator
+	for finding the remainder. The result of <b>11 % 3</b> is 2, because 
+	11 leaves 2 as the remainder on division by 3.
+
+	People who know loops and arrays, I'd recommend that you write both
+	versions of this code - one using loops &amp; arrays, and the other
+	without using them. You would be surprised that the latter is shorter.
+	Not a big thing, really. Just saying.)
+
+	<hr>
+2. <b>Armstrong Number</b>
+	Look up what an Armstrong number is, on Google, in case you don't
+	already know. 
+
+	Your task is this - given a 3 digit number, output "YES" if the 
+	number is an Armstrong number. Output "NO" otherwise.
+
+	(
+	<em>Hint</em>: To extract the digit in ten's place of a number, you may 
+	do this: 
+		<b>(mynumber / 10) % 10</b>
+	)
+
+	<hr>
+3. <b>Time conversion</b>
+	You are to write a program that converts between the 24 hour format time
+	and 12 hour format time. So, as an input, you take two numbers,
+		hh:mm
+	and also a number, which indicates that the user wants to convert 
+	from 12 hour format to 24 hour format, or vice versa (use it the way
+	we used the "shape" variable in the rectangle-triangle area program).
+
+	It would be nice if you could also check if the input is invalid. 
+	That is, the user might enter 13:59 and ask you to convert from 
+	12 hour to 24 hour format, however 13:59 is itself in 24 hour format.
+
+
+	<hr>
+4. <b>Date verifier</b>
+	As I had said in the session, you are to write a program that checks if
+	the given date is valid. I want you to check all corner cases. So,
+	for example, your program must be able to handle cases like
+		29 2 2015
+	The program must mark this as invalid. 
+
+	<b>Note:</b>Leap years aren't just years divisible by 4! If a year 
+	is a century year (divisible by 100), then it must also be divisible
+	by 400. So, 1900 isn't a leap year. But 2000 is.
+
+	</pre>
+</div>

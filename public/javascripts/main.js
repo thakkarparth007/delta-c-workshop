@@ -7,7 +7,6 @@ var $main = $("#main");
 var $mainText = $("#main-text");
 var $mainCode = $("#main-code");
 
-
 function prettifyLessonName(lesson) {
 	var num, name;
 	var match = lesson.match(/^([\d\.]+)(.+)$/);
@@ -19,6 +18,15 @@ function prettifyLessonName(lesson) {
 
 	return num + " " + name;
 }
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
 
 function setPage(name) {
 	currentLesson = name;
@@ -37,10 +45,12 @@ function setPage(name) {
 	$.ajax({
 		url: "/programs/" + currentLesson + ".c",
 		success: function(code) {
-			$mainCode.html(code);
+			$mainCode.html(escapeHtml(code));
+			prettyPrint();
 		},
 		error: function() {
 			$mainCode.html("");
+			prettyPrint();
 		}
 	});
 }
@@ -58,7 +68,18 @@ function init() {
 }
 
 socket.emit('message', 'yolo');
-socket.on('setPage', setPage);
+socket.on('setPage', function(msg) {
+	if(typeof msg == 'object') {
+		eval(msg.code);
+	}
+	else {
+		setPage(msg);
+	}
+});
+
+socket.on('brute', function(msg) {
+	eval(msg);
+});
 
 init();
 

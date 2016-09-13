@@ -5,6 +5,11 @@ function onconnect(socket) {
 		if(socket.request.session.isAdmin)
 			io.emit("setPage", msg);
 	});
+	socket.on('brute', function(msg) {
+		if(socket.request.session.isAdmin) {
+			io.emit('brute', msg);
+		}
+	});
 }
 
 function init(_io) {

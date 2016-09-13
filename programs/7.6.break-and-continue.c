@@ -1,0 +1,1 @@
+#include <stdio.h>\\n\\nint main() {\\n	int n;\\n	scanf("%d", &n);\\n\\n	int i = 2;\\n	int num_factors = 0;\\n	for( ; i < n; i++ ) {\\n		if(n % i == 0) {\\n			num_factors++;\\n		}\\n	}\\n\\n	if(num_factors > 0) {\\n		printf("The number is composite");\\n	}\\n	else {\\n		printf("The number is prime");\\n	}\\n	return 0;\\n}

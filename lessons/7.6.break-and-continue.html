@@ -1,0 +1,20 @@
+<h1>The break and the continue statements</h1>
+
+<div>
+	<pre>
+
+Consider the problem of checking if a number is prime or not.
+The way you'd have done is this - you go through all numbers from 
+1 to n, and then count the number of factors of the number in 
+question, and then at the end of the loop, check if the number 
+of factors is two.
+
+That's valid. However, there is a better way. You start from <em>i = 2</em>, 
+and check if <em>i</em> divides the number in question <em>n</em>. Instead
+of looping through all the numbers from 1 to n, you can simply stop the loop
+whenever you encounter the first factor of n. Why? Because that would mean
+that we've found a factor of n, and that means that n isn't prime!
+
+How to do this? Using the break statement:
+	</pre>
+</div>

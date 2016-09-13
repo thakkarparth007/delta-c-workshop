@@ -1,0 +1,99 @@
+<h1>The ctype header file</h1>
+
+<pre>
+	
+This file contains a lot of functions for doing character manipulations. 
+Here's a list of common functions that you might come across:
+
+isupper, islower, toupper, tolower, isdigit, isalpha, isalnum
+</pre>
+
+<style type="text/css">
+	table td, table th {
+		padding: 5px;
+	}
+</style>
+
+<table border="1" cellspacing="0">
+	<tr>
+		<th>Function name</th>
+		<th>Return type</th>
+		<th>Arguments</th>
+		<th>Example</th>
+		<th>Explanation</th>
+	</tr>
+
+	<tr>
+		<td>isupper</td>
+		<td>char</td>
+		<td>int</td>
+		<td>isupper('a')</td>
+		<td>returns a non-zero number if the argument is an uppercase (capital) character. Otherwise 0.</td>
+	</tr>
+
+	<tr>
+		<td>islower</td>
+		<td>char</td>
+		<td>int</td>
+		<td>islower('a')</td>
+		<td>returns a non-zero number if the argument is a lowercase (capital) character. Otherwise 0.</td>
+	</tr>
+
+	<tr>
+		<td>toupper</td>
+		<td>char</td>
+		<td>int</td>
+		<td>toupper('a')</td>
+		<td>returns the corresponding uppercase character for a lowercase character. If the argument isn't a 
+		letter, then the same character is returned.</td>
+	</tr>
+
+	<tr>
+		<td>tolower</td>
+		<td>char</td>
+		<td>int</td>
+		<td>tolower('A')</td>
+		<td>returns the corresponding lowercase character for an uppercase character. If the argument isn't a 
+		letter, then the same character is returned.</td>
+	</tr>
+
+	<tr>
+		<td>isdigit</td>
+		<td>char</td>
+		<td>int</td>
+		<td>isdigit('a')</td>
+		<td>returns non-zero number if the argument is a digit. returns 0 otherwise.</td>
+	</tr>
+
+	<tr>
+		<td>isalpha</td>
+		<td>char</td>
+		<td>int</td>
+		<td>isalpha('a')</td>
+		<td>returns non-zero number if the argument is a letter. returns 0 otherwise.</td>
+	</tr>
+
+	<tr>
+		<td>isalnum</td>
+		<td>char</td>
+		<td>int</td>
+		<td>isalnum('a')</td>
+		<td>returns non-zero number if the argument is a digit or a letter. returns 0 otherwise.</td>
+	</tr>
+
+	<tr>
+		<td>ispunct</td>
+		<td>char</td>
+		<td>int</td>
+		<td>ispunct('a')</td>
+		<td>returns non-zero number if the argument is a punctutation. returns 0 otherwise.</td>
+	</tr>
+
+	<tr>
+		<td>isspace</td>
+		<td>char</td>
+		<td>int</td>
+		<td>isspace('a')</td>
+		<td>returns non-zero number if the argument is a whitespace (tab/space/new line/carriage-return). returns 0 otherwise.</td>
+	</tr>
+</table>

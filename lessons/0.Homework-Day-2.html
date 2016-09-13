@@ -1,0 +1,72 @@
+<h1>Homework for Day 2</h1>
+
+<hr>
+
+<pre>
+
+Before the homework, we'd like to have a review of the first 
+two days. Please fill <a href="http://goo.gl/forms/DyK0GTCVl2">this feedback form</a> if you already haven't.
+
+<hr>
+
+1. <b>Maximum of a list</b>: <em>[ Easy ]</em>
+	
+	Write a program to find the largest of a series of numbers. The program must prompt the user to enter the numbers one by one. When the user enters 0 or a negative number, the program must display the largest non negative number entered.
+	(Hint: while loop)
+
+2. <b>Third largest of a list</b>:  <em>[ Slightly Tricky ]</em>
+
+	Write the same program, but instead of printing the largest, print the third largest. Assume that the input has at least 3 numbers.
+
+3. <b>GCD</b>:  <em>[ Moderate ]</em>
+
+	Write a program that prints the GCD of two numbers.
+
+	(Hint: Use Euclid's algorithm.
+	Let <em>m</em> and <em>n</em> be two numbers. If <em>n</em> is 0, then stop. <em>m</em> contains the GCD. Otherwise, compute the remainder when <em>m</em> is divided by <em>n</em>. Copy <em>n</em> into <em>m</em> and copy the remainder into <em>n</em>. Then repeat the process, starting wih testing whether <em>n</em> is 0.)
+
+3.1 <b>Fraction adder</b>: <em>[ Easy if you could do problem 3 ]</em>
+
+	This is a a small extension to the previous problem. Write a program that takes input as 2 fractions, and you are to print the sum of the two fractions - taking care that you print the fraction in its lowest terms (that is, for 8/16, you should print 1/2)
+
+4. <b>Calender printer</b>:  <em>[ Moderate ]</em>
+
+	Write a program that prints a one-month calender. The user specifies the number of days in the month and the day of the week on which the month begins.
+
+	For example:
+
+	<div style="border: 1">
+		Enter the number of days in month: 31
+		Enter starting day of the week (1=Sun, 7=Sat): 3
+
+		       1  2  3  4  5
+		 6  7  8 10 11 12 13
+		13 14 15 16 17 18 19
+		20 21 22 23 24 25 26
+		27 28 29 30 31
+	</div>
+
+	Hint: This program isn't as hard as it looks. The most important part is a for statement that uses a variable i to count from 1 to n, where n is the number of days in the month, printing each value of i. Inside the loop, an if statement tests whether i is the last day in a week; if so, it prints a new line character.
+
+5. <b>Number of days between two dates</b> <em>[ Annoyingly tricky ]</em>:
+
+	Write a program, that reads two dates as input, and prints the number of days between the two dates. Take care to deal with leap years.
+
+6. <b>Finding the line of best fit</b> <em>[ Fun problem, but easy ]</em>:
+
+	While conducting an experiment, one often has to draw graphs. Consider such a typical case, where you have some data points, and you are to plot a graph. However, this situtation is different. In school experiments, you'd be knowing the relation between the quantities on x and y axes before hand. For example, in an experiment to verify Ohm's law, you'd be knowing before hand that <b>V = IR</b>. In most real experiments, you wouldn't be knowing the relation before hand. Also, unlike school, you can't manipulate your observations to the "correct" values. There are no correct values.
+
+	In such case, what is usually done is, the data points are marked on the graph sheet, and a curve is drawn such that it seems to make sense of the data. This process is called curve-fitting. 
+
+	Your task is to tackle a smaller version of curve-fitting - you are to find the line of best fit - the line that best matches the data points. The input is n pairs of numbers (can be non-integers too), and your output must be the equation of the line.
+
+	<a href="http://hotmath.com/hotmath_help/topics/line-of-best-fit.html">Look at this page</a>. The page describes how to calculate the line. (This isn't the only method used to calculate this btw.)
+
+	The program is extremely simple once you know the formula, of course. The point of giving this program was just give something light-weight and fun and insightful.
+
+7. <b>John Convey's "look and say" sequence</b> <em>[ Difficult ]</em>
+
+	Have a look at what <a href="https://en.wikipedia.org/wiki/Look-and-say_sequence">wikipedia</a> has to say about the "Look and Say Sequence".
+
+	Your task is to write a program to print first n terms of this sequence. 
+</pre>

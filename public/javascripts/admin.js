@@ -1,6 +1,7 @@
 (function() {
 
-	socket.emit("message", "I'm the boss.");
-	socket.on("message", alert.bind(window));
+	$("#sidebar a").on('click', function(a) {
+		socket.emit("setPage", this.id);
+	});
 
 })();
